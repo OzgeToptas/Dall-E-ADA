@@ -1,4 +1,4 @@
-import { saveAs } from 'file-saver';
+import FileSaver from 'file-saver';
 import { surpriseMePrompts } from '../constant';
 
 export function getRandomPrompt(prompt) {
@@ -11,5 +11,5 @@ export function getRandomPrompt(prompt) {
 }
 
 export async function downloadImage(_id, photo) {
-  fileSaver.saveAs(photo, `download-${_id}.jpg`);
+  FileSaver.saveAs(photo, `download-${_id}.jpg`);
 }
